@@ -26,7 +26,7 @@ gulp.task('clean', function() {
 
 gulp.task('html', function() {
   return gulp
-    .src(['./src/html/**/*.html'])
+    .src(['./src/html/**/*.html', '!./src/html/blocks/*.html'])
     // .pipe(changed('./dist/'))
     .pipe(plumber(plumberConfig('HTML')))
     .pipe(fileInclude({
